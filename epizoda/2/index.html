@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="cs-CZ">
+<head>
+<base href="http://bruskodu.cz" />
+
+<meta charset="UTF-8" />
+<title>Brus kódu &mdash;   Epizoda 2: S Riki Fridrichem o automatizaci s Grunt.js a CoffeeScriptu</title>
+<meta name="viewport" content="width=device-width" />
+
+<meta property="og:title" content="Brus kódu &mdash;   Epizoda 2: S Riki Fridrichem o automatizaci s Grunt.js a CoffeeScriptu" />
+<meta property="og:image" content="http://data.medvedi.eu/bruskodu/bruskodu.png" />
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+<link rel='stylesheet' id='less-style-css'  href='http://bruskodu.cz/wp-content/themes/bk/style.css?ver=all' type='text/css' media='all' />
+
+ 
+
+<link rel='next' title='Epizoda 3: S Tomášem Krejčím o šablonách a responzivních e-mailech' href='http://bruskodu.cz/epizoda/3/' />
+
+<link rel='canonical' href='http://bruskodu.cz/epizoda/2/' />
+<link rel='shortlink' href='http://bruskodu.cz/?p=89' />
+
+</head>
+
+<body class="single single-post postid-89 single-format-standard">
+<!--
+	Ahoj zvědavče!
+	
+	Já vím, já vím - natáčíme podcast o front-end technologiích s profesionálními 
+	vývojáři a přitom sami máme v kódu takový zmatek. Jaké pokrytectví!
+
+	K tomu mohu říci tři věci:
+
+	* Kovářova kobyla chodí bosa.
+	* Je to upravená šablona pro Wordpress - nejrychlejší možnost jak začít.
+	* Omlouvám se.
+
+	Doufám, že to pochopíš.
+
+	Robin
+
+	P.S. Dívat se do ciziho kódu je často lepší než poslouchat všelijaké podcasty,
+	určitě v tom pokračuj (ale pšt - to nesmím říkat nahlas).
+-->
+
+
+<header id="masthead" class="site-header" role="banner">
+	<div class="container">
+		
+		<div class="gravatar">
+			<a href="http://bruskodu.cz/" title="Brus kódu" rel="home">
+				<img alt='' src='http://1.gravatar.com/avatar/14e5859b16fd8325296066d94aa920ee?s=200&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D200&amp;r=G' class='avatar avatar-200 photo' height='200' width='200' />			</a>
+		</div><!--/ author -->
+		
+		<div id="brand">
+			<h1 class="site-title"><a href="http://bruskodu.cz/" title="Brus kódu" rel="home">Brus kódu</a> &mdash; <span>Podcast o front-endových vývojářích a technologiích.</span></h1>
+		</div><!-- /brand -->
+	
+		<nav role="navigation" class="site-navigation main-navigation">
+			<ul>
+				<li><a title="iTunes" href="https://itunes.apple.com/us/podcast/brus-kodu/id711411245">p</a></li>
+				<li><a title="RSS" href="/feed/">r</a></li>
+				<li><a title="twitter" href="http://twitter.com/bruskodu">t</a></li>
+				<li><a title="Google+" rel="publisher" href="https://plus.google.com/111130348672165790691/">g</a></li>
+			</ul>
+
+		</nav><!-- .site-navigation .main-navigation -->
+		
+		<div class="clear"></div>
+	</div><!--/container -->
+		
+</header><!-- #masthead .site-header -->
+
+<div class="container">
+
+	<div id="primary">
+		<div id="content" role="main">
+
+
+
+
+
+			
+				
+
+					<article class="post">
+					
+						<h1 class="title">Epizoda 2: S Riki Fridrichem o automatizaci s Grunt.js a CoffeeScriptu</h1>
+						<div class="post-meta">
+							<time datetime="2013-10-08">8. 10. 2013</time>
+						</div><!--/post-meta -->
+						
+						<div class="the-content">
+							<p>V druhé epizodě si s <a href="https://twitter.com/fczbkk">@fczbkk</a> povídáme o různých způsobech automatizace, možnostech použití Grunt.js a jeho nastavení, nenáročnosti a rychlosti přechodu na CoffeeScript a o tom, že být v něčem dobrý nemusí být složité. Ke konci Riki prozradí, jaká vlastnost nejlépe doplňuje lenost.</p>
+<p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F114353821&amp;color=90b574&amp;auto_play=false&amp;show_artwork=false&amp;download=true"></iframe></p>
+<p class="links">
+<a href="http://data.medvedi.eu/bruskodu/bruskodu_02.mp3" class="powerpress_link_d" title="Stáhnout" rel="nofollow">Stáhnout</a> (29:11 &mdash; 14MB) | <a href="https://itunes.apple.com/cs/podcast/brus-kodu/id711411245">iTunes</a>
+</p>
+<ul>
+<li>Rikiho <a href="http://fczbkk.com/">blog</a>, <a href="https://twitter.com/fczbkk">Twitter</a>, <a href="https://www.facebook.com/fczbkk">Facebook</a> a <a href="https://plus.google.com/111453401774376620498">Google +</a></li>
+<li><a href="https://github.com/mshorts/belvedere">Belvedere</a></li>
+<li><a href="http://www.goodsync.com/">GoodSync</a></li>
+<li><a href="http://www.youtube.com/watch?v=HcfsPjSNLJo&#038;list=PLkp_Yw-9vBSuRn5Ivg0ZdM14A3TgxSQ2I">Záznam</a> a <a href="http://www.slideshare.net/parallaxis/develconf-coffeescript">slidy</a> přednášky Martina Malého &#8211; <em>S CoffeeScriptem snadněji, rychleji a radostněji!</em></li>
+<li><a href="https://github.com/fczbkk/Backdrop">Backdrop</a></li>
+<li><a href="http://coffeescript.org/">CoffeeScript.org/</a></li>
+<li><a href="http://www.coffeelint.org/">CoffeeLint</a></li>
+</ul>
+						</div><!-- the-content -->
+						
+						<div class="meta clearfix">
+							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bruskodu.cz/epizoda/2/" data-via="bruskodu" data-text="Epizoda 2: S Riki Fridrichem o automatizaci s Grunt.js a CoffeeScriptu" data-count="none" data-lang="cs">Tweet</a>
+&nbsp;
+							<div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://bruskodu.cz/epizoda/2/"></div>
+
+												</div><!-- Meta -->						
+						
+					</article>
+
+					<!-- pagination -->
+					<div id="pagination" class="clearfix">
+						<div class="next-page"><a href="/">&laquo; Na hlavní stránku</a></div>
+					</div><!-- pagination -->
+
+				
+				
+				
+
+			
+
+		
+
+
+		</div><!-- #content .site-content -->
+	</div><!-- #primary .content-area -->
+
+</div><!-- / container-->
+
+
+<footer class="site-footer" role="contentinfo">
+	<div class="site-info container">
+		
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/cz/"><img alt="Licence Creative Commons" style="border-width:0" width="80" height="15" src="http://bruskodu.cz/wp-content/themes/bk/images/cc-by-nc.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Sound" property="dct:title" rel="dct:type">Brus kódu</span> je projekt <a xmlns:cc="http://creativecommons.org/ns#" href="http://twitter.com/robinpokorny" property="cc:attributionName" rel="cc:attributionURL">@robinpokorny</a> a podléhá licenci <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/cz/">CC BY-NC 3.0 CZ</a>.<br />
+Pište na ahoj (zavináč) bruskodu.cz.
+	</div><!-- .site-info -->
+</footer><!-- #colophon .site-footer -->
+
+<a style="display:none" href="https://plus.google.com/+robinpokorny?rel=author">Google</a>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-639471-28', 'bruskodu.cz');
+  ga('send', 'pageview');
+
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'cs'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+</body>
+</html>
