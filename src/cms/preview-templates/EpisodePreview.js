@@ -8,6 +8,8 @@ const EpisodePreview = ({ entry, widgetFor }) => (
     description={entry.getIn(["data", "description"])}
     episodeNo={entry.getIn(["data", "episodeNo"])}
     embed={entry.getIn(["data", "embed"])}
+    download={entry.getIn(["data", "download"])}
+    season={entry.getIn(["data", "season"])}
     title={entry.getIn(["data", "title"])}
   />
 );

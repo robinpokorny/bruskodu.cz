@@ -10,6 +10,8 @@ export const EpisodeTemplate = ({
   contentComponent,
   episodeNo,
   embed,
+  download,
+  season,
   title,
   helmet
 }) => {
@@ -25,7 +27,7 @@ export const EpisodeTemplate = ({
               {title}
             </h1>
             <p>
-              {episodeNo} {embed}
+              E{episodeNo}S{season} {embed} {download}
             </p>
             <PostContent content={content} />
           </div>
@@ -40,6 +42,8 @@ EpisodeTemplate.propTypes = {
   contentComponent: PropTypes.func,
   episodeNo: PropTypes.number,
   embed: PropTypes.string,
+  download: PropTypes.string,
+  season: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object
 };
@@ -55,6 +59,8 @@ const Episode = ({ data, pageContext }) => {
         contentComponent={HTMLContent}
         episodeNo={post.frontmatter.episodeNo}
         embed={post.frontmatter.embed}
+        download={post.frontmatter.download}
+        season={post.frontmatter.season}
         helmet={
           <Helmet titleTemplate="%s | Brus kódu">
             <title>{`${post.frontmatter.title}`}</title>
@@ -95,6 +101,8 @@ export const pageQuery = graphql`
         title
         episodeNo
         embed
+        download
+        season
       }
     }
   }

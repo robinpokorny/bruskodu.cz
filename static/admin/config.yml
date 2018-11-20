@@ -13,22 +13,37 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "episode",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "date" }
-      - {
-          label: "Episode number",
-          name: "episodeNo",
-          widget: "number",
-          valueType: "int",
-        }
-      - { label: "Embed URL", name: "embed", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "episode"
+      - label: "Název"
+        name: "title"
+        widget: "string"
+      - label: "Datum vydání"
+        name: "date"
+        widget: "date"
+      - label: "Číslo epizody"
+        name: "episodeNo"
+        widget: "number"
+        valueType: "int"
+      - label: "Sezóna"
+        name: "season"
+        widget: "select"
+        options:
+          - label: "Sezóna 1"
+            value: "1"
+          - label: "Sezóna 2"
+            value: "2"
+      - label: "URL pro vložení"
+        name: "embed"
+        widget: "string"
+      - label: "URL pro stažení"
+        name: "download"
+        widget: "string"
+      - label: "Text"
+        name: "body"
+        widget: "markdown"
 
   - name: "pages"
     label: "Pages"
@@ -37,11 +52,13 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Template Key"
+            name: "templateKey"
+            widget: "hidden"
+            default: "about-page"
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
