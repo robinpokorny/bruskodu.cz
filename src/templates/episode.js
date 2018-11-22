@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
 export const EpisodeTemplate = ({
   content,
@@ -13,17 +13,17 @@ export const EpisodeTemplate = ({
   download,
   season,
   title,
-  helmet
+  helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+    <section className='section'>
+      {helmet || ''}
+      <div className='container content'>
+        <div className='columns'>
+          <div className='column is-10 is-offset-1'>
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
               {title}
             </h1>
             <p>
@@ -34,8 +34,8 @@ export const EpisodeTemplate = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 EpisodeTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -45,12 +45,12 @@ EpisodeTemplate.propTypes = {
   download: PropTypes.string,
   season: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
-};
+  helmet: PropTypes.object,
+}
 
 const Episode = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data;
-  const { prev, next } = pageContext;
+  const { markdownRemark: post } = data
+  const { prev, next } = pageContext
 
   return (
     <Layout>
@@ -62,9 +62,9 @@ const Episode = ({ data, pageContext }) => {
         download={post.frontmatter.download}
         season={post.frontmatter.season}
         helmet={
-          <Helmet titleTemplate="%s | Brus kódu">
+          <Helmet titleTemplate='%s | Brus kódu'>
             <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.title}`} />
+            <meta name='description' content={`${post.frontmatter.title}`} />
           </Helmet>
         }
         title={post.frontmatter.title}
@@ -80,16 +80,16 @@ const Episode = ({ data, pageContext }) => {
         </Link>
       )}
     </Layout>
-  );
-};
+  )
+}
 
 Episode.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+    markdownRemark: PropTypes.object,
+  }),
+}
 
-export default Episode;
+export default Episode
 
 export const pageQuery = graphql`
   query EpisodeByID($id: String!) {
@@ -106,4 +106,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
