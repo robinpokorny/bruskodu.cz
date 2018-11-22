@@ -1,15 +1,28 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Navbar from '../components/Navbar'
-import './all.sass'
+import Header from './Header'
+import Footer from './Footer'
+import './all.scss'
 
-const TemplateWrapper = ({ children }) => (
+export default ({ children }) => (
   <div>
-    <Helmet title='Home | Gatsby + Netlify CMS' />
-    <Navbar />
-    <div>{children}</div>
+    <Helmet defaultTitle='Brus kódu' titleTemplate='%s — Brus kódu'>
+      <html lang='cs' />
+      <link
+        href='http://fonts.googleapis.com/css?family=Playfair+Display:700&subset=latin,latin-ext'
+        rel='stylesheet'
+        type='text/css'
+      />
+    </Helmet>
+    <Header />
+    <div class='container'>
+      <div id='primary'>
+        <div id='content' role='main'>
+          {children}
+        </div>
+      </div>
+    </div>
+    <Footer />
   </div>
 )
-
-export default TemplateWrapper

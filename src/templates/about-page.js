@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -36,6 +37,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title={post.frontmatter.title} />
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
