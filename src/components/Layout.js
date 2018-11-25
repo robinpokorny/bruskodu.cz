@@ -10,7 +10,7 @@ export default ({ children }) => (
     <Helmet defaultTitle='Brus kódu' titleTemplate='%s — Brus kódu'>
       <html lang='cs' />
       <link
-        href='http://fonts.googleapis.com/css?family=Playfair+Display:700&subset=latin,latin-ext'
+        href='https://fonts.googleapis.com/css?family=Playfair+Display:700&subset=latin,latin-ext'
         rel='stylesheet'
         type='text/css'
       />
