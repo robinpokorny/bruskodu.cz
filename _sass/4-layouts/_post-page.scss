@@ -10,11 +10,11 @@
 }
 
 .post-info {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: $base-small-font-size;
+  line-height: $base-small-line-height;
   letter-spacing: 0.5px;
   color: $gray;
-  
+
   a {
     display: inline-block;
     color: lighten($dark, 10%);
@@ -31,7 +31,7 @@
     content: ",";
     display: inline-block;
   }
-  
+
   &:last-child {
     &:after {
       content: "";
@@ -70,7 +70,7 @@
 .share__item {
   display: inline-block;
   margin-right: 5px;
-  
+
   &:last-child {
     margin-right: 0px;
   }
@@ -84,7 +84,7 @@
   line-height: 35px;
   color: #fff;
   cursor: pointer;
-  
+
   &:hover {
     color: #fff;
   }
@@ -113,11 +113,11 @@
 
 .recent-box {
   display: flex;
-  
+
   .recent-posts {
     width: 30%;
     margin-left: 5%;
-    
+
     &:first-child {
       margin-left: 0;
     }
@@ -134,7 +134,6 @@
   }
 }
 
-
 .recent-posts__image {
   position: relative;
   display: block;
@@ -146,7 +145,7 @@
 
   &:hover {
     &:before {
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
       opacity: 1;
       visibility: visible;
     }
@@ -160,8 +159,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.1);
-    transition: .3s ease-in-out;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
   }
@@ -199,15 +198,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   .newsletter-email {
     height: 45px;
     width: 285px;
     max-width: 100%;
     padding: 15px;
-    font-size: 13px;
+    font-size: $base-small-font-size;
+    line-height: $base-small-line-height;
   }
-  
+
   .newsletter-button {
     height: 45px;
     width: 120px;
@@ -215,11 +215,11 @@
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: all .15s;
+    transition: all 0.15s;
     color: #fff;
     background-color: $dark;
     cursor: pointer;
-    
+
     &:hover {
       background-color: $brand-color;
     }

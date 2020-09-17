@@ -9,7 +9,7 @@
   margin-top: 80px;
   padding-bottom: 20px;
   border-bottom: 1px solid $light-gray;
-  
+
   .header__overlay {
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(17,17,17,0.7);
+    background-color: rgba(17, 17, 17, 0.7);
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -36,10 +36,9 @@
   }
 }
 
-
 /* Logo */
 .logo__link {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 31px;
   line-height: 50px;
   font-weight: 700;
@@ -64,13 +63,13 @@
       display: inline-block;
       margin-right: 5px;
     }
-  
+
     .nav__link {
       position: relative;
       display: inline-block;
       padding: 5px 10px;
-      font-size: 14px;
-      transition: all .3s ease;
+      font-size: $base-font-size;
+      transition: all 0.3s ease;
 
       &:hover {
         color: #fff;
@@ -79,7 +78,7 @@
           height: 100%;
         }
       }
-      
+
       &:after {
         content: "";
         position: absolute;
@@ -89,27 +88,26 @@
         width: 100%;
         z-index: -1;
         background-color: $dark;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
       }
     }
   }
-  
+
   .nav__close {
     display: none;
   }
 }
 
-
 /* Nav Buttons */
 .nav-buttons {
   margin-left: 10px;
   line-height: initial;
-  
-  .nav__icon {  
+
+  .nav__icon {
     &:first-child {
       margin-right: 10px;
     }
-    
+
     font-size: 20px;
     cursor: pointer;
   }
@@ -125,7 +123,6 @@
   }
 }
 
-
 @media only screen and (max-width: $mobile) {
   .main-nav__box {
     position: fixed;
@@ -140,7 +137,7 @@
     &.is-open {
       right: 0;
     }
-  
+
     .nav__list {
       padding: 50px 30px 30px;
 
@@ -148,13 +145,13 @@
         display: block;
         margin-right: 0;
       }
-  
+
       .nav__link {
         display: block;
         margin: 20px 0;
         padding: 10px 0;
         text-align: center;
-        
+
         &.is-active {
           margin: 20px 0;
           padding: 10px 15px;

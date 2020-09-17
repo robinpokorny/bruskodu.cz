@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  'use strict';
+$(document).ready(function () {
+  "use strict";
 
   var headerOverlay = $(".header__overlay"),
     menuOpenIcon = $(".nav__icon-menu"),
@@ -12,13 +12,13 @@ $(document).ready(function() {
   /* =======================
   // Menu and Search
   ======================= */
-  menuOpenIcon.click(function() {
+  menuOpenIcon.click(function () {
     menuOpen();
-  })
+  });
 
   menuCloseIcon.click(function () {
     menuClose();
-  })
+  });
 
   searchOpenIcon.click(function () {
     searchOpen();
@@ -52,13 +52,6 @@ $(document).ready(function() {
   }
 
   /* =======================
-  // Responsive Videos
-  ======================= */
-  $(".post__content, .page__content").fitVids({
-    customSelector: ['iframe[src*="ted.com"]']
-  });
-
-  /* =======================
   // Zoom Image
   ======================= */
   $(".page img, .post img").attr("data-action", "zoom");
@@ -67,12 +60,10 @@ $(document).ready(function() {
   /* =======================
   // Scroll Top Button
   ======================= */
-  $(".top").click(function() {
-    $("html, body")
-      .stop()
-      .animate({ scrollTop: 0 }, "slow", "swing");
+  $(".top").click(function () {
+    $("html, body").stop().animate({ scrollTop: 0 }, "slow", "swing");
   });
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > $(window).height()) {
       $(".top").addClass("is-active");
     } else {
@@ -85,5 +76,4 @@ $(document).ready(function() {
   ============================= */
   $(".page img, .post img").addClass("wow fadeIn");
   new WOW().init();
-
 });

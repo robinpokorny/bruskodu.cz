@@ -6,9 +6,6 @@
 }
 
 .article__title {
-  margin-bottom: 20px;
-  font-size: 21px;
-
   a {
     &:hover {
       color: $brand-color;
@@ -18,17 +15,15 @@
 
 .article__excerpt {
   margin-bottom: 20px;
-  font-size: 15px;
-  line-height: 25px;
   color: $gray;
 }
 
 .article-info {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: $base-small-font-size;
+  line-height: $base-small-line-height;
   letter-spacing: 0.5px;
   color: $gray;
-  
+
   a {
     display: inline-block;
     color: lighten($dark, 10%);
@@ -45,7 +40,7 @@
     content: ",";
     display: inline-block;
   }
-  
+
   &:last-child {
     &:after {
       content: "";

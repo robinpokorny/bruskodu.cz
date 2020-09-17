@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -10,20 +12,21 @@ body {
   background-color: $background-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  input, textarea {
-		border: 1px solid $border-color;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: #e02f40;
-		}
-		&:required:valid {
-			border-color: #34a74e;
-		}
-	}
+  input,
+  textarea {
+    border: 1px solid $border-color;
+    outline: none;
+    &:focus:required:invalid {
+      border-color: #e02f40;
+    }
+    &:required:valid {
+      border-color: #34a74e;
+    }
+  }
 }
 
 ::placeholder {
-	color: #666;
+  color: #666;
 }
 
 *::selection {
@@ -72,16 +75,16 @@ h6 {
 blockquote {
   padding-left: $base-spacing-unit;
   font-size: 24px;
-  line-height: 34px;
+  line-height: 40px;
   border-left: 3px solid $brand-color;
   font-style: normal;
-  
+
   cite {
     font-size: 16px;
     font-style: normal;
     color: $gray;
     &:before {
-      content: '\2014' '\00a0';
+      content: "\2014""\00a0";
     }
   }
 
@@ -102,14 +105,13 @@ pre {
   word-break: break-all;
 }
 
-
 // Images
-img, 
+img,
 .zoom-img-wrap {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  &+em {
+  & + em {
     display: block;
     margin-top: 15px;
     font-size: 14px;
@@ -121,13 +123,12 @@ img,
   }
 }
 
-
 // Links
 a {
   text-decoration: none;
   color: $link-color;
-  transition: all .15s;
-  
+  transition: all 0.15s;
+
   &:hover {
     color: $link-color-hover;
   }
