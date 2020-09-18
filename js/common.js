@@ -1,79 +1,108 @@
-$(document).ready(function () {
-  "use strict";
+"use strict";
 
-  var headerOverlay = $(".header__overlay"),
-    menuOpenIcon = $(".nav__icon-menu"),
-    menuCloseIcon = $(".nav__close"),
-    menuList = $(".main-nav__box"),
-    searchOpenIcon = $(".nav__icon-search"),
-    searchCloseIcon = $(".search__close"),
-    searchBox = $(".search");
+var ready = function (fn) {
+  if (document.readyState !== "loading") {
+    fn();
+  } else {
+    document.addEventListener("DOMContentLoaded", fn);
+  }
+};
+
+ready(function () {
+  var $ = document.querySelector.bind(document);
+  var $$ = document.querySelectorAll.bind(document);
+
+  var onClick = function (el, fn) {
+    el.addEventListener("click", fn, false);
+    el.addEventListener("keydown", fn, false);
+  };
 
   /* =======================
   // Menu and Search
   ======================= */
-  menuOpenIcon.click(function () {
-    menuOpen();
-  });
+  var headerOverlay = $(".header__overlay");
+  var menuOpenIcon = $(".nav__icon-menu");
+  var menuCloseIcon = $(".nav__close");
+  var menuList = $(".main-nav__box");
+  var searchOpenIcon = $(".nav__icon-search");
+  var searchCloseIcon = $(".search__close");
+  var searchBox = $(".search");
 
-  menuCloseIcon.click(function () {
+  var menuOpen = function () {
+    menuList.classList.add("is-open");
+    headerOverlay.classList.add("is-visible");
+  };
+  var menuClose = function () {
+    menuList.classList.remove("is-open");
+    headerOverlay.classList.remove("is-visible");
+  };
+  var searchOpen = function () {
+    searchBox.classList.add("is-visible");
+  };
+  var searchClose = function () {
+    searchBox.classList.remove("is-visible");
+  };
+
+  onClick(menuOpenIcon, menuOpen);
+
+  onClick(menuCloseIcon, menuClose);
+
+  onClick(searchOpenIcon, searchOpen);
+
+  onClick(searchCloseIcon, searchClose);
+
+  onClick(headerOverlay, function () {
     menuClose();
-  });
-
-  searchOpenIcon.click(function () {
-    searchOpen();
-  });
-
-  searchCloseIcon.click(function () {
     searchClose();
   });
-
-  headerOverlay.click(function () {
-    menuClose();
-    searchClose();
-  });
-
-  function menuOpen() {
-    menuList.addClass("is-open");
-    headerOverlay.addClass("is-visible");
-  }
-
-  function menuClose() {
-    menuList.removeClass("is-open");
-    headerOverlay.removeClass("is-visible");
-  }
-
-  function searchOpen() {
-    searchBox.addClass("is-visible");
-  }
-
-  function searchClose() {
-    searchBox.removeClass("is-visible");
-  }
-
-  /* =======================
-  // Zoom Image
-  ======================= */
-  $(".page img, .post img").attr("data-action", "zoom");
-  $(".page a img, .post a img").removeAttr("data-action", "zoom");
 
   /* =======================
   // Scroll Top Button
-  ======================= */
+  ======================= 
   $(".top").click(function () {
     $("html, body").stop().animate({ scrollTop: 0 }, "slow", "swing");
   });
   $(window).scroll(function () {
     if ($(this).scrollTop() > $(window).height()) {
-      $(".top").addClass("is-active");
+      $(".top").classList.add("is-active");
     } else {
-      $(".top").removeClass("is-active");
+      $(".top").classList.remove("is-active");
+    }
+  });*/
+
+  var scrollTopIcon = $(".top");
+
+  onClick(scrollTopIcon, function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+  var scrollTopShow = function () {
+    scrollTopIcon.classList.add("is-active");
+  };
+  var scrollTopHide = function () {
+    scrollTopIcon.classList.remove("is-active");
+  };
+
+  window.addEventListener("scroll", function () {
+    if (
+      document.body.scrollTop > screen.availHeight ||
+      document.documentElement.scrollTop > screen.availHeight
+    ) {
+      scrollTopShow();
+    } else {
+      scrollTopHide();
     }
   });
 
   /* =============================
   // WOW Animation When You Scroll
   ============================= */
-  $(".page img, .post img").addClass("wow fadeIn");
+  var postImages = $$(".page img, .post img");
+
+  [].forEach.call(postImages, function (img) {
+    img.classList.add("wow", "fadeIn");
+  });
+
   new WOW().init();
 });
