@@ -16,6 +16,7 @@ twitter: https://twitter.com/bruskodu # Add your Twitter handle
 instagram: https://instagram.com/bruskodu # Add your Instagram handle
 # pinterest: https://pinterest.com/ # Add your Pinterest handle
 email: ahoj@bruskodu.com # Add your Email address
+rss: https://anchor.fm/s/58f7dac/podcast/rss
 
 # Hero Section
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
@@ -64,3 +65,14 @@ tag_permalink_style: pretty
 sass:
   sass_dir: _sass
   style: compressed
+
+# Subscribe badges
+badges:
+  - url: "https://itunes.apple.com/us/podcast/brus-kodu/id711411245"
+    image_name: "applepodcasts_en"
+  - url: "https://open.spotify.com/show/7C2cCvLqWmQPJiWHleIDq6"
+    image_name: "spotify_en"
+  - url: "https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzLzM3ODY4NjUzLWJydXNrb2R1L3RyYWNrcw%3D%3D"
+    image_name: "googlepodcasts_en"
+  - url: "https://anchor.fm/s/58f7dac/podcast/rss"
+    image_name: "rss_en"

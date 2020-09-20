@@ -4,21 +4,28 @@
       <!-- begin pagination -->
       <nav class="pagination">
         <div class="pagination__list">
-          {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-            <a class="previous-link" href="/"><i class="ion ion-ios-arrow-back"></i> Prev</a>
+          {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+          <a class="previous-link" href="/"
+            ><i class="ion ion-ios-arrow-back"></i> Novější</a
+          >
           {% else %}
-            <a class="previous-link" href="/page/{{ paginator.previous_page }}/"><i class="ion ion-ios-arrow-back"></i>  Prev</a>
-          {% endif %}
-    
+          <a class="previous-link" href="/page/{{ paginator.previous_page }}/"
+            ><i class="ion ion-ios-arrow-back"></i> Novější</a
+          >
+          {% endif %} {% else %}
+          <span class="prev-disabled"
+            ><i class="ion ion-ios-arrow-back"></i> Novější</span
+          >
+          {% endif %} {% if paginator.next_page %}
+          <a
+            class="next-link"
+            href="{{ site.baseurl }}/page/{{ paginator.next_page }}/"
+            >Starší <i class="ion ion-ios-arrow-forward"></i
+          ></a>
           {% else %}
-            <span class="prev-disabled"><i class="ion ion-ios-arrow-back"></i> Prev</span>
-          {% endif %}
-    
-          {% if paginator.next_page %}
-            <a class="next-link" href="{{ site.baseurl }}/page/{{ paginator.next_page }}/">Next <i class="ion ion-ios-arrow-forward"></i></a>
-          {% else %}
-            <span class="next-disabled">Next <i class="ion ion-ios-arrow-forward"></i></span>
+          <span class="next-disabled"
+            >Starší <i class="ion ion-ios-arrow-forward"></i
+          ></span>
           {% endif %}
         </div>
       </nav>
