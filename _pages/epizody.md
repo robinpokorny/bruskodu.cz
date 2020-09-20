@@ -1,30 +1,39 @@
 ---
 layout: page
-title: Style Guide
-permalink: /styleguide/
-image: images/12.jpg
+title: Epizody
+permalink: /epizody/
+image: images/juja-han-uT55XxQLQGU-unsplash.jpg
 ---
 
 A paragraph looks like this — dolor amet cray stumptown fingerstache neutra food truck seitan poke cardigan waistcoat VHS snackwave celiac hella. Godard seitan shoreditch flexitarian next level trust fund man braid vegan listicle keytar bitters. Disrupt cray fashion axe unicorn lomo shaman poke glossier keffiyeh snackwave austin tattooed seitan hexagon lo-fi. Lumbersexual irony vaporware, butcher shaman church-key iceland.
 
-***
+---
 
 ### Headings by default:
 
 # H1 For example
+
 ## H2 For example
+
 ### H3 For example
+
 #### H4 For example
+
 ##### H5 For example
+
 ###### H6 For example
 
 {% highlight markdown %}
+
 ## Heading first level
+
 ### Heading second level
+
 #### Heading third level
+
 {% endhighlight %}
 
-***
+---
 
 ### Lists
 
@@ -36,25 +45,26 @@ A paragraph looks like this — dolor amet cray stumptown fingerstache neutra fo
 4. Jean shorts shaman listicle pickled portland.
 5. Salvia mumblecore brunch iPhone migas.
 
-***
+---
 
 #### Unordered list example:
 
-* Bitters semiotics vice thundercats synth.
-* Literally cred narwhal bitters wayfarers.
-* Kale chips chartreuse paleo tbh street art marfa.
-* Mlkshk polaroid sriracha brooklyn.
-* Pug you probably haven't heard of them air plant man bun.
+- Bitters semiotics vice thundercats synth.
+- Literally cred narwhal bitters wayfarers.
+- Kale chips chartreuse paleo tbh street art marfa.
+- Mlkshk polaroid sriracha brooklyn.
+- Pug you probably haven't heard of them air plant man bun.
 
 {% highlight markdown %}
+
 1. Order list item 1
 2. Order list item 1
 
-* Unordered list item 1
-* Unordered list item 2
-{% endhighlight %}
+- Unordered list item 1
+- Unordered list item 2
+  {% endhighlight %}
 
-***
+---
 
 ### Quotes
 
@@ -64,34 +74,32 @@ A paragraph looks like this — dolor amet cray stumptown fingerstache neutra fo
 >
 > <cite>George Bernard Shaw</cite>
 
-***
-
-
+---
 
 ### Syntax Highlighter
 
 {% highlight js %}
-  $('.top').click(function () {
+$('.top').click(function () {
     $('html, body').stop().animate({ scrollTop: 0 }, 'slow', 'swing');
-  });
-  $(window).scroll(function () {
+});
+$(window).scroll(function () {
     if ($(this).scrollTop() > $(window).height()) {
       $('.top').addClass("top-active");
-    } else {
-      $('.top').removeClass("top-active");
-    };
-  });
+} else {
+\$('.top').removeClass("top-active");
+};
+});
 {% endhighlight %}
 
-***
+---
 
 ## Videos
 
 <iframe src="https://www.youtube.com/embed/iWowJBRMtpc" frameborder="0" allowfullscreen></iframe>
 
-***
+---
 
 ### Images
 
 ![]({{site.baseurl}}/images/13.jpg)
-*Streets of New York*
+_Streets of New York_

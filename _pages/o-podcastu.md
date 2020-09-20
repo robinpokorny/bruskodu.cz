@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: O podcastu
+permalink: /o-podcastu/
 image: images/01.jpg
 ---
 
