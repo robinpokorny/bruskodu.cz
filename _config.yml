@@ -68,11 +68,15 @@ sass:
 
 # Subscribe badges
 badges:
-  - url: "https://itunes.apple.com/us/podcast/brus-kodu/id711411245"
+  - name: "Apple Podcasts"
+    url: "https://itunes.apple.com/us/podcast/brus-kodu/id711411245"
     image_name: "applepodcasts_en"
-  - url: "https://open.spotify.com/show/7C2cCvLqWmQPJiWHleIDq6"
+  - name: "Spotify"
+    url: "https://open.spotify.com/show/7C2cCvLqWmQPJiWHleIDq6"
     image_name: "spotify_en"
-  - url: "https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzLzM3ODY4NjUzLWJydXNrb2R1L3RyYWNrcw%3D%3D"
+  - name: "Google Podcasts"
+    url: "https://www.google.com/podcasts?feed=aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzLzM3ODY4NjUzLWJydXNrb2R1L3RyYWNrcw%3D%3D"
     image_name: "googlepodcasts_en"
-  - url: "https://anchor.fm/s/58f7dac/podcast/rss"
+  - name: "RSS"
+    url: "https://anchor.fm/s/58f7dac/podcast/rss"
     image_name: "rss_en"

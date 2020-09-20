@@ -5,11 +5,15 @@
     your inbox
   </div>
   <div class="newsletter-group">
-    {% for badge in site.badges %}
-    <a class="newsletter-badge" href="{{ badge.url }}"
-      ><img
-        src="{{ badge.image_name | prepend: 'images/' | append: '@3x.png' | relative_url }}"
-    /></a>
+    {% for badge in site.badges %} {% assign image = badge.image_name | prepend:
+    'images/badges/' %}
+    <a class="newsletter-badge" href="{{ badge.url }}">
+      <img
+        alt="Poslouchat na {{ badge.name}}"
+        src="{{ image | append: '.png' | relative_url }}"
+        srcset="{{ image | append: '.png' | relative_url }} 132w, {{ image | append: '@2x.png' | relative_url }} 264w, {{ image | append: '@3x.png' | relative_url }} 396w"
+      />
+    </a>
     {% endfor %}
   </div>
 </div>
