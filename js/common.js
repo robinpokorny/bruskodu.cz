@@ -18,15 +18,12 @@ ready(function () {
   };
 
   /* =======================
-  // Menu and Search
+  // Menu
   ======================= */
   var headerOverlay = $(".header__overlay");
   var menuOpenIcon = $(".nav__icon-menu");
   var menuCloseIcon = $(".nav__close");
   var menuList = $(".main-nav__box");
-  var searchOpenIcon = $(".nav__icon-search");
-  var searchCloseIcon = $(".search__close");
-  var searchBox = $(".search");
 
   var menuOpen = function () {
     menuList.classList.add("is-open");
@@ -36,25 +33,12 @@ ready(function () {
     menuList.classList.remove("is-open");
     headerOverlay.classList.remove("is-visible");
   };
-  var searchOpen = function () {
-    searchBox.classList.add("is-visible");
-  };
-  var searchClose = function () {
-    searchBox.classList.remove("is-visible");
-  };
 
   onClick(menuOpenIcon, menuOpen);
 
   onClick(menuCloseIcon, menuClose);
 
-  onClick(searchOpenIcon, searchOpen);
-
-  onClick(searchCloseIcon, searchClose);
-
-  onClick(headerOverlay, function () {
-    menuClose();
-    searchClose();
-  });
+  onClick(headerOverlay, menuClose);
 
   /* =======================
   // Scroll Top Button

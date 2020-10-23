@@ -1,0 +1,11 @@
+{% if include.episode %} {% assign path = "episode/" | append: include.episode
+%} {% else %} {% assign path = "show/7C2cCvLqWmQPJiWHleIDq6" %} {% endif %}
+<iframe
+  class="spotify-embed"
+  src="https://open.spotify.com/embed-podcast/{{path}}"
+  width="100%"
+  height="232"
+  frameborder="0"
+  allowtransparency="true"
+  allow="encrypted-media"
+></iframe>
