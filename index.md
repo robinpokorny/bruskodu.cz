@@ -41,7 +41,7 @@ ethical squid cray jianbing mustache. Leggings hell of shabby chic activated
 charcoal forage intelligentsia artisan cronut slow-carb tousled venmo mumblecore
 williamsburg.
 
-![]({{site.baseurl}}/images/13.jpg)
+![]({{site.baseurl}}/images/juja-han-uT55XxQLQGU-unsplash.jpg)
 _Streets of New York_
 
 #### A quote looks like this:
