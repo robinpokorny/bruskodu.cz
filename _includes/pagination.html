@@ -9,7 +9,9 @@
             ><i class="ion ion-ios-arrow-back"></i> Novější</a
           >
           {% else %}
-          <a class="previous-link" href="/page/{{ paginator.previous_page }}/"
+          <a
+            class="previous-link"
+            href="{{ site.baseurl }}/blog/page/{{ paginator.previous_page }}/"
             ><i class="ion ion-ios-arrow-back"></i> Novější</a
           >
           {% endif %} {% else %}
@@ -19,7 +21,7 @@
           {% endif %} {% if paginator.next_page %}
           <a
             class="next-link"
-            href="{{ site.baseurl }}/page/{{ paginator.next_page }}/"
+            href="{{ site.baseurl }}/blog/page/{{ paginator.next_page }}/"
             >Starší <i class="ion ion-ios-arrow-forward"></i
           ></a>
           {% else %}

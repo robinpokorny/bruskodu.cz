@@ -19,8 +19,8 @@ email: ahoj@bruskodu.com # Add your Email address
 
 # Hero Section
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
-hero-title: Raked Minimalistic Theme # Add your hero title
-hero-subtitle: For those who love simplicity # Add your hero subtitle
+hero-title: Brus kódu # Add your hero title
+hero-subtitle: podcast o front-endových vývojářích a technologiích # Add your hero subtitle
 hero-image: images/14.jpg # Add background image in section hero
 
 # Footer
@@ -44,7 +44,7 @@ plugins:
   - jekyll/tagging
 
 paginate: 4
-paginate_path: "/page/:num"
+paginate_path: "/blog/page/:num"
 
 # Pages Path
 defaults:

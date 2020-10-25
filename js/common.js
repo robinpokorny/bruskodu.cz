@@ -17,43 +17,6 @@ ready(function () {
     el.addEventListener("keydown", fn, false);
   };
 
-  /* =======================
-  // Menu
-  ======================= */
-  var headerOverlay = $(".header__overlay");
-  var menuOpenIcon = $(".nav__icon-menu");
-  var menuCloseIcon = $(".nav__close");
-  var menuList = $(".main-nav__box");
-
-  var menuOpen = function () {
-    menuList.classList.add("is-open");
-    headerOverlay.classList.add("is-visible");
-  };
-  var menuClose = function () {
-    menuList.classList.remove("is-open");
-    headerOverlay.classList.remove("is-visible");
-  };
-
-  onClick(menuOpenIcon, menuOpen);
-
-  onClick(menuCloseIcon, menuClose);
-
-  onClick(headerOverlay, menuClose);
-
-  /* =======================
-  // Scroll Top Button
-  ======================= 
-  $(".top").click(function () {
-    $("html, body").stop().animate({ scrollTop: 0 }, "slow", "swing");
-  });
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > $(window).height()) {
-      $(".top").classList.add("is-active");
-    } else {
-      $(".top").classList.remove("is-active");
-    }
-  });*/
-
   var scrollTopIcon = $(".top");
 
   onClick(scrollTopIcon, function () {

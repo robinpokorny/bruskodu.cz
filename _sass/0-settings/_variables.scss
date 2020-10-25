@@ -23,8 +23,8 @@ $text-color: $dark;
 $heading-font-color: $dark;
 
 // Links
-$link-color: $dark;
-$link-color-hover: darken($dark, 15%);
+$link-color: darken($brand-color, 15%);
+$link-color-hover: $gray;
 
 // Border
 $border-color: $light-gray;
